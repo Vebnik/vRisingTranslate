@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "google-translate-token": "^1.0.0",
+    "node-fetch": "^2.6.7",
     "translate": "^1.4.1"
   }
 }

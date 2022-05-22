@@ -13,7 +13,7 @@ export class Localize {
 		translate.key = key
 	}
 
-	constructor(trans, key = process.env.GOOGLE_KEY, engine = 'google') {
+	constructor(trans, key = process.env.GOOGLE_KEY, engine = 'deepl') {
 		this.#trans = trans
 		this.#key = key
 		this.#engine = engine
