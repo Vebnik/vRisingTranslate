@@ -37,13 +37,13 @@ const getRuText = async () => {
 	dataEn.then(async el => {
 
 		await data.then(ruText => {
-			return ruText.split('|').map(el => el.replace(/\r\n/g, ''))
+			return ruText.split('|').map(el => el.replace(/\r\n|Machine Translated by Google/g, ''))
 		})
 			.then(async text => {
 				const ruParsingText = JSON.parse(el).Nodes.map((nodeText, i) => {
 					return {
 						"Guid": nodeText.Guid,
-						"Text": text[i]
+						"Text": text[i] || 'Empty'
 					}
 				})
 
@@ -54,4 +54,3 @@ const getRuText = async () => {
 }
 
 getRuText().catch(err => console.error(err ))
-//getText().catch(err => console.error(err ))
